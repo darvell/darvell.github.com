@@ -1,0 +1,5 @@
+// under_construction.gif
+// Author: Darvell Long <contact@darvell.me>
+// Proper git coming soon....
+
+var blink_closure=function(){var a={};var b=function(b){var c=$.extend({speed:1},b);var d=this;if(b==="stop"){clearInterval(a[d]);return}a[d]=setInterval(function(){if(d.css("opacity")<.01){d.css("opacity",1)}else{d.css("opacity",0)}},c.speed*1e3)};return b};jQuery.fn.blink=blink_closure();var mouse_closure=function(){var a=function(a){var b=$.extend({offsetX:-16,offsetY:-16},a);var c=this.get(0);$(c).css("position","absolute");$(c).css("pointer-events","none");$("*").css("cursor","none");$("*").mousemove(function(a){$(c).offset({top:a.pageY+b.offsetY,left:a.pageX+b.offsetX})})};return a};jQuery.fn.cursor=mouse_closure();jQuery.fn.marquee=function(a){var b=$.extend({speed:1},a);this.wrap('<div style="overflow: hidden; width: 100%" />');var c=this.innerWidth();var d=function(){e.css({"margin-left":c,"text-align":"left"});e.animate({"margin-left":-1*c},b.speed*1e4,"linear",d)};var e=this;d()}

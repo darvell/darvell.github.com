@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  
+  <head>
+    <title>DARVELL MEGA DRIVE</title>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="jQuerycities.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#cursor").cursor({
+          "offsetX": 0,
+          "offsetY": 0,
+        });
+        $(".blink").each(function (i) {
+          $(this).blink();
+        });
+        $(".marquee").each(function (i) {
+          $(this).marquee();
+        });
+      });
+    </script>
+    <style type "text/css">
+      body {
+        background-image:url(grid.png)
+      }
+      #header {
+        width:400px;
+        position:relative;
+        white-space:nowrap;
+        margin-left:auto;
+        margin-right:auto
+      }
+      #headermarq {
+        height:64px
+      }
+      #content {
+        color:#FFF;
+        width:600px;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        font-family:Verdana;
+        font-size:11px
+      }
+      h1 {
+        color:#FFF;
+        font-size:18px
+      }
+      a:link, a:visited, a:hover, a:active {
+        text-decoration:none;
+        color:#FFF
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="cursor">
+      <img src="mecursor.png" />
+    </div>
+    <div id="header">
+      <div id="headermarq">
+        <img style="position:absolute;" src="bord.png">
+        <div class="marquee">
+          <img src="welcome.png" />
+        </div>
+      </div>
+      <div class="blink" style="margin-left:-100px">
+        <img src="terrible.png" />
+      </div>
+    </div>
+    <div id="content">
+      <h1>
+        <a href="https://github.com/darvell/Compiling-Music">Coding Music</a>
+      </h1>
+      <p>A Visual Studio 2010 addon based on BASS.DLL that provides the ability
+        to play custom music during compilation, on copile failure and compile
+        error.</p>
+      </p>
+      <hr>
+      <h1>
+        <a href="https://github.com/darvell/EasyMikro">EasyMikro</a>
+      </h1>
+      <p>A PHP abstraction layer for the Mikrotik VPN API.</p>
+      <hr>
+      <h1>
+        <a href="https://github.com/darvell/ImageGlitch">ImageGlitch</a>
+      </h1>
+      <p>A python based web service for corrupting jpg images with modifiable parameters.</p>
+      <hr>
+      <p>I don't post much to github, you might find some more crap on my site
+        <a
+        href="http://darvell.me">darvell.me</a>.</p>
+    </div>
+  </body>
+
+</html>
